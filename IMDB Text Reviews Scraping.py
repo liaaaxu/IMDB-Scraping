@@ -142,7 +142,7 @@ reviewDates = pd.to_datetime(temp, infer_datetime_format=True)
 
 userReviews = imdbReviews['userReviews']
 
-userRates = imdbReviews_1999to2019_pre['userRates']
+userRates = imdbReviews['userRates']
 userRates = userRates.replace({'\[<span>':'', '</span>]':'', '\[]': 0}, regex=True).astype(int)
 
 zippedList = zip(imdbID, totalNumReviews, userID, spoilerWarning, reviewTitles, usefulNum, usefulTotal, reviewDates,
