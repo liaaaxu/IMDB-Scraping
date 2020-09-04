@@ -4,11 +4,11 @@ import pandas as pd
 import numpy as np
 
 # put down your file/data path
-sample_space = ''
-
+sample_space = pd.read_csv('')
 # movies are represented by id codes in IMDB database, for example, the movie Joker's id is "tt7286456"
 # before scraping, we need to have a movie id space to loop over later
-
+# a good way is to load the data from IMDB public datasets, the "tconst" variable is the alphanumeric unique identifier of the title
+# sample_space should be a dataframe with a column called "tconst"
 
 imdbID_space = sample_space['tconst']
 length = len(sample_space)
