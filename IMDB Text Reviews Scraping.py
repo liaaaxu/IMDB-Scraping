@@ -2,6 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import numpy as np
+import warnings
+warnings.filterwarnings("ignore")
 
 # put down your file/data path
 sample_space = pd.read_csv('')
