@@ -4,15 +4,15 @@ This web scraper is tailored for imdb.com. The main goal is to collect user-gene
 
 ### IMDB Text Reviews Scraping.py
 
-1. imdbID: the IMDB ID of the movie
-2. totalNumReviews: total number of reviews of the movie
-3. spoilerWarning: equals to 1 if the review is marked with "Warning: Spoilers"
-4. reviewTitles: the title of the review
-5. reviewUseful: the number of users who find the review helpful out of the number of users who vote, ex: 198 out of 303 found this helpful
-6. reviewDates: the date of the review posted
-7. userReviews: the text content of the review
-8. userRates: the rating given along with the review
-9. userID: the IMDB ID of the user who posted the review
+1. imdbID: the IMDB ID of the movie title
+2. totalNumReviews: total number of reviews of the movie title
+3. userID: the IMDB ID of the user who posted the review
+4. spoilerWarning: equals to 1 if the review is marked with "Warning: Spoilers"
+5. reviewTitles: the title of the review
+6. reviewUseful: the number of users who find the review helpful out of the number of users who vote. Ex: 198 out of 303 found this helpful
+7. reviewDates: the date of the review got posted
+8. userReviews: the text content of the review
+9. userRates: the rating given along with the review, a numerical value between 0 and 10
 
 The final results in dataframe format may look like the following. Notice that further cleaning and organizing are needed to get neat data.
 
