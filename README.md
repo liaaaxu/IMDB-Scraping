@@ -1,6 +1,8 @@
 ## IMDB Scraping
 
-This web scraper is tailored for imdb.com. The main goal is to collect user-generated online text reviews as well as relevant movie features for future research purposes. Here I list all the variables that will be gathered:
+This web scraper is tailored for imdb.com. The main goal is to collect user-generated online text reviews as well as relevant movie features for future research purposes. Here I list all the variables that will be gathered.
+
+Note: IMDB does offer public datasets: https://www.imdb.com/interfaces/. 
 
 ### IMDB Text Reviews Scraping.py
 
