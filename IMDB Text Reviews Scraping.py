@@ -5,6 +5,8 @@ import numpy as np
 import warnings
 warnings.filterwarnings("ignore")
 
+#### PART 1: SCRAPING ####
+
 # put down your file/data path
 sample_space = pd.read_csv('')
 
@@ -105,3 +107,48 @@ imdbReviews = pd.DataFrame(zippedList, columns = ['imdbID', 'totalNumReviews', '
                                                   'reviewTitles', 'reviewUseful', 'reviewDates', 
                                                   'userReviews', 'userRates'])
 imdbReviews.to_csv('Output/imdbReviews.csv')
+
+#### PART 2: CLEANING ####
+
+imdbReviews = pd.read_csv('Output/imdbReviews.csv')
+
+imdbID = imdbReviews['imdbID']
+
+totalNumReviews = imdbReviews['totalNumReviews']
+
+userID = imdbReviews['userID']
+userID = userID.str.split('/', expand = True)[2]
+
+spoilerWarning = imdbReviews['spoilerWarning']
+spoilerWarning[spoilerWarning == "Warning: Spoilers"] = 1
+spoilerWarning[spoilerWarning == "None"] = 0
+spoilerWarning[spoilerWarning == '<span class="spoiler-warning">Warning: Spoilers</span>'] = 1
+
+reviewTitles = imdbReviews['reviewTitles']
+reviewTitles = reviewTitles.str.split('\n', expand = True)[0]
+
+reviewUseful = imdbReviews['reviewUseful']
+temp = reviewUseful.str.split('\n', expand = True)[1]
+usefulNum = temp.str.split('out of', expand = True)[0].replace(',', '', regex=True).astype(int)
+usefulTotal = temp.str.split('out of', expand = True)[1].str.split('found this helpful.', expand = True)[0].replace(',', '', regex=True).astype(int)
+
+reviewDates = imdbReviews['reviewDates']
+temp = reviewDates.replace({' January ': '/1/', ' February ': '/2/', ' March ': '/3/', ' April ': '/4/',
+                            ' May ': '/5/', ' June ': '/6/', ' July ': '/7/', ' August ': '/8/', 
+                            ' September ': '/9/', ' October ': '/10/', ' November ': '/11/', 
+                            ' December ': '/12/'}, regex=True).astype(str)
+reviewDates = pd.to_datetime(temp, infer_datetime_format=True)
+
+userReviews = imdbReviews['userReviews']
+
+userRates = imdbReviews_1999to2019_pre['userRates']
+userRates = userRates.replace({'\[<span>':'', '</span>]':'', '\[]': 0}, regex=True).astype(int)
+
+zippedList = zip(imdbID, totalNumReviews, userID, spoilerWarning, reviewTitles, usefulNum, usefulTotal, reviewDates,
+                 userReviews, userRates)
+
+imdbReviews_cleaned = pd.DataFrame(zippedList, columns = ['imdbID', 'totalNumReviews', 'userID', 'spoilerWarning', 
+                                                          'reviewTitles', 'usefulNum', 'usefulTotal', 'reviewDates', 
+                                                          'userReviews', 'userRates']).reset_index()
+
+imdbReviews_cleaned.to_csv('Output/imdbReviews_cleaned.csv')
