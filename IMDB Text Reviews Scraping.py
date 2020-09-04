@@ -5,7 +5,7 @@ import numpy as np
 import warnings
 warnings.filterwarnings("ignore")
 
-#### PART 1: SCRAPING ####
+######################################## PART 1: SCRAPING ########################################
 
 # put down your file/data path
 sample_space = pd.read_csv('')
@@ -108,7 +108,8 @@ imdbReviews = pd.DataFrame(zippedList, columns = ['imdbID', 'totalNumReviews', '
                                                   'userReviews', 'userRates'])
 imdbReviews.to_csv('Output/imdbReviews.csv')
 
-#### PART 2: CLEANING ####
+
+######################################## PART 2: CLEANING ########################################
 
 imdbReviews = pd.read_csv('Output/imdbReviews.csv')
 
