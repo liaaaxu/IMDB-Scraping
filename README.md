@@ -17,7 +17,7 @@ Note: IMDB does offer public datasets: https://www.imdb.com/interfaces/.
 9. userReviews: the text content of the review
 10. userRates: the rating given along with the review, a numerical value between 0 and 10
                                                   
-The final results in dataframe format may look like the following.
+The final results in dataframe format may look like the following:
 
 <img width="1354" alt="Screen Shot 2020-09-04 at 11 32 19 AM" src="https://user-images.githubusercontent.com/33683715/92274609-6da71300-eea2-11ea-91fe-aceae8520a78.png">
 
