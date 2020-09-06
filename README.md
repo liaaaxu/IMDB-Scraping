@@ -13,7 +13,7 @@ This web scraper is tailored for imdb.com. The main goal is to collect user-gene
 - **reviewTitles** : the title of the review
 - **usefulNum** : the number of users who found the review helpful
 - **usefulTotal** : the number of users who voted
-- **reviewDates** : the date of when the review was posted
+- **reviewDates** : the date when the review was posted
 - **userReviews** : the text content of the review
 - **userRates** : the rating given along with the review, a numerical value between 0 and 10
                                                   
