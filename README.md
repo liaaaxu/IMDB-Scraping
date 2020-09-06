@@ -11,9 +11,9 @@ This web scraper is tailored for imdb.com. The main goal is to collect user-gene
 - **userID** : the IMDB ID of the user who posted the review
 - **spoilerWarning** : equals to 1 if the review is marked with "Warning: Spoilers"
 - **reviewTitles** : the title of the review
-- **usefulNum** : the number of users who find the review helpful
-- **usefulTotal** : the number of users who vote
-- **reviewDates** : the date of the review got posted
+- **usefulNum** : the number of users who found the review helpful
+- **usefulTotal** : the number of users who voted
+- **reviewDates** : the date of when the review was posted
 - **userReviews** : the text content of the review
 - **userRates** : the rating given along with the review, a numerical value between 0 and 10
                                                   
