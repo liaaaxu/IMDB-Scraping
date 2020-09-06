@@ -19,6 +19,8 @@ This web scraper is tailored for imdb.com. The main goal is to collect user-gene
                                                   
 The final results in dataframe format may look like the following:
 
+<img width="1309" alt="Screen Shot 2020-09-05 at 9 01 51 PM" src="https://user-images.githubusercontent.com/33683715/92317964-121c7880-efbb-11ea-84a8-f947d3272b6f.png">
+
 
 ### IMDB Film Features Scraping.py
 
