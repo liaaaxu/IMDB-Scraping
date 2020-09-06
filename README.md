@@ -17,7 +17,7 @@ This web scraper is tailored for imdb.com. The main goal is to collect user-gene
 - **userReviews** : the text content of the review
 - **userRates** : the rating given along with the review, a numerical value between 0 and 10
                                                   
-The final results in dataframe format may look like the following:
+The final results in dataframe format should look like the following:
 
 <img width="1309" alt="Screen Shot 2020-09-05 at 9 01 51 PM" src="https://user-images.githubusercontent.com/33683715/92317964-121c7880-efbb-11ea-84a8-f947d3272b6f.png">
 
